@@ -2,7 +2,7 @@
  * Led Blink.c
  *
  * Created: 8/20/2016 11:10:31 AM
- * Author : Nilesh
+ * Author : Nilesh Mundphan
  */ 
 
 #define F_CPU 16000000				//Define Clock frequency 
