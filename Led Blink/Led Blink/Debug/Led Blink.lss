@@ -70,17 +70,17 @@ Disassembly of section .text:
   7c:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
 
 00000080 <main>:
-#define LEDPIN	PB5
+#define LEDPIN	PB0
 
 int main(void)
 {
     /* Replace with your application code */
     LEDDDR |= (1<< LEDPIN);				//Configure PIN as Output
-  80:	25 9a       	sbi	0x04, 5	; 4
+  80:	20 9a       	sbi	0x04, 0	; 4
 	while (1) 
     {
 		LEDPORT |= (1<< LEDPIN);		//Make PIN HIGH
-  82:	2d 9a       	sbi	0x05, 5	; 5
+  82:	28 9a       	sbi	0x05, 0	; 5
 	#else
 		//round up by default
 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
@@ -98,7 +98,7 @@ int main(void)
   94:	00 00       	nop
 		_delay_ms(1000);
 		LEDPORT &= ~(1<< LEDPIN);		//Make PIN LOW
-  96:	2d 98       	cbi	0x05, 5	; 5
+  96:	28 98       	cbi	0x05, 0	; 5
   98:	2f ef       	ldi	r18, 0xFF	; 255
   9a:	83 ed       	ldi	r24, 0xD3	; 211
   9c:	90 e3       	ldi	r25, 0x30	; 48

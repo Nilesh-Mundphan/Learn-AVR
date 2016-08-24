@@ -11,7 +11,7 @@
 
 #define LEDDDR	DDRB				//LED micros
 #define LEDPORT PORTB
-#define LEDPIN	PB5
+#define LEDPIN	PB0
 
 int main(void)
 {
